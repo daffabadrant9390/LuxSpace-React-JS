@@ -20,14 +20,14 @@
     @apply opacity-100;
   }
 
-  /* .overlay .video { */
-  /* For Icon Play */
-  /* @apply absolute transform flex justify-center items-center bg-blue-200 rounded-full bg-no-repeat bg-center;
-    background-image: url("../images/design/icon-play.svg"); */
-  /* For Blue Background Position */
-  /* left: 50%;
-    top: 50%; */
-  /* } */
+  .overlay .video {
+    /* For Icon Play */
+    @apply absolute transform flex justify-center items-center bg-blue-200 rounded-full bg-no-repeat bg-center;
+    background-image: url("../images/icon-play.svg");
+    /* For Blue Background Position */
+    left: 50%;
+    top: 50%;
+  }
 
   .hero .hero-image,
   .hero .hero-caption {
