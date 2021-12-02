@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ theme, position }) => {
   return (
-    <header className="w-full absolute z-50 px-4">
+    <header className={[position, "w-full z-50 px-4"].join(" ")}>
       <div className="container mx-auto py-10">
         {/* <!-- div to divide the logo and navbar using flex --> */}
         <div className="flex flex-stretch items-center">
           {/* <!-- START: Logo --> */}
           <div className="w-56 flex items-center">
-            <img
-              src="images/content/logo.png"
-              alt="LuxSpace - is a web application that sell the best furnitures from all over the world"
-            />
+            <Link to="/">
+              <img
+                src="/images/content/logo.png"
+                alt="LuxSpace - is a web application that sell the best furnitures from all over the world"
+              />
+            </Link>
           </div>
           {/* <!-- END: Logo --> */}
 
@@ -41,7 +43,12 @@ const Header = () => {
               <li className="mx-3 py-6 md:py-0">
                 <Link
                   to="/showcase"
-                  className="text-black hover:text-white hover:underline"
+                  className={[
+                    "hover:underline",
+                    theme === "white"
+                      ? "text-black md:text-white"
+                      : "text-white md:text-black",
+                  ].join(" ")}
                 >
                   Showcase
                 </Link>
@@ -49,7 +56,12 @@ const Header = () => {
               <li className="mx-3 py-6 md:py-0">
                 <Link
                   to="/catalog"
-                  className="text-black hover:text-white hover:underline"
+                  className={[
+                    "hover:underline",
+                    theme === "white"
+                      ? "text-black md:text-white"
+                      : "text-white md:text-black",
+                  ].join(" ")}
                 >
                   Catalog
                 </Link>
@@ -57,7 +69,12 @@ const Header = () => {
               <li className="mx-3 py-6 md:py-0">
                 <Link
                   to="/delivery"
-                  className="text-black hover:text-white hover:underline"
+                  className={[
+                    "hover:underline",
+                    theme === "white"
+                      ? "text-black md:text-white"
+                      : "text-white md:text-black",
+                  ].join(" ")}
                 >
                   Delivery
                 </Link>
@@ -65,7 +82,12 @@ const Header = () => {
               <li className="mx-3 py-6 md:py-0">
                 <Link
                   to="/rewards"
-                  className="text-black hover:text-white hover:underline"
+                  className={[
+                    "hover:underline",
+                    theme === "white"
+                      ? "text-black md:text-white"
+                      : "text-white md:text-black",
+                  ].join(" ")}
                 >
                   Rewards
                 </Link>
@@ -110,15 +132,12 @@ const Header = () => {
                 <a
                   href="cart.html"
                   id="header-cart"
-                  className="
-                    w-8
-                    h-8
-                    flex
-                    justify-center
-                    items-center
-                    text-black
-                    cart cart-filled
-                  "
+                  className={[
+                    "w-8 h-8 flex justify-center items-center cart cart-filled",
+                    theme === "white"
+                      ? "text-black md:text-white"
+                      : "text-white md:text-black",
+                  ].join(" ")}
                 >
                   <svg
                     className="fill-current"
