@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = ({ theme, position }) => {
   return (
-    <header className={[position, "w-full z-50 px-4"].join(" ")}>
+    <header className={[position, "w-full z-20 px-4"].join(" ")}>
       <div className="container mx-auto py-10">
         {/* <!-- div to divide the logo and navbar using flex --> */}
         <div className="flex flex-stretch items-center">
